@@ -22,6 +22,7 @@ namespace BuildABookBag.Models
         public string AgeLevel { get; set; }
         [Required]
         public string PickUpLocation { get; set; }
+        public string BookBagRequestMonth { get; set; }
         public string AdditionalComments { get; set; }
 
     }

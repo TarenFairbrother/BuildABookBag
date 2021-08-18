@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BuildABookBag.Migrations
 {
     [DbContext(typeof(BookRequestDbContext))]
-    [Migration("20210818191337_ChangePhoneNumberToLongInsteadOfInt")]
-    partial class ChangePhoneNumberToLongInsteadOfInt
+    [Migration("20210818195835_InitailCreation")]
+    partial class InitailCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,6 +32,9 @@ namespace BuildABookBag.Migrations
 
                     b.Property<string>("AgeLevel")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BookBagRequestMonth")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CardHolderName")

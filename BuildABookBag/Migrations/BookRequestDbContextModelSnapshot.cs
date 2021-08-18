@@ -32,6 +32,9 @@ namespace BuildABookBag.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("BookBagRequestMonth")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("CardHolderName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
