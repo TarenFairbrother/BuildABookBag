@@ -26,7 +26,10 @@ namespace BuildABookBag.Controllers
             if (bookBagRequest == null)
                 return BadRequest();
 
-            bookBagRequest.BookBagRequestMonth = DateTime.Now.ToString("MMMM");
+            if (bookBagRequest.RequestMonth == null)
+            {
+                bookBagRequest.RequestMonth = DateTime.Now.ToString("MMMM");
+            }
 
             await _bookBagRepo.AddNewBookBagRequest(bookBagRequest);
 
