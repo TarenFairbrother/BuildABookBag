@@ -1,0 +1,7 @@
+select COUNT(BookBagId) 'book bag requests', PickUpLocation 
+from BookBagRequests
+group by PickUpLocation
+
+select COUNT(BookBagId) 'book bag requests', RequestMonth
+from BookBagRequests
+group by RequestMonth
